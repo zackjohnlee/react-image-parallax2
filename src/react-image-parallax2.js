@@ -62,9 +62,9 @@ class ImageParallax extends Component {
         0, 1,
         (this.container.getBoundingClientRect().top + parentHeight) / (window.innerHeight + parentHeight)
       );
-      const transformY = ratio * reduceHeight - reduceHeight;
+      const transformY = ratio * reduceHeight - reduceHeight / parentHeight;
       return {
-        transformY: transformY
+        transformY: -transformY
       };
     });
   }
